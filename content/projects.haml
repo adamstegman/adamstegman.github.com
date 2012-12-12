@@ -14,7 +14,7 @@ title: Projects
         %article
           %hgroup
             %h4
-              %a{:href => url_for(project)}= project[:title]
+              = link_to(project[:title], project)
             - if project[:subtitle]
               %h5= project[:subtitle]
           %footer
@@ -33,7 +33,7 @@ title: Projects
         %article
           %hgroup
             %h4
-              %a{:href => url_for(project)}= project[:title]
+              = link_to(project[:title], project)
             - if project[:subtitle]
               %h5= project[:subtitle]
           %footer
@@ -52,7 +52,7 @@ title: Projects
         %article
           %hgroup
             %h4
-              %a{:href => url_for(project)}= project[:title]
+              = link_to(project[:title], project)
             - if project[:subtitle]
               %h5= project[:subtitle]
           %footer
@@ -71,7 +71,7 @@ title: Projects
         %article
           %hgroup
             %h4
-              %a{:href => url_for(project)}= project[:title]
+              = link_to(project[:title], project)
             - if project[:subtitle]
               %h5= project[:subtitle]
           %footer
@@ -90,7 +90,7 @@ title: Projects
         %article
           %hgroup
             %h4
-              %a{:href => url_for(project)}= project[:title]
+              = link_to(project[:title], project)
             - if project[:subtitle]
               %h5= project[:subtitle]
           %footer
