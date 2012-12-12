@@ -33,11 +33,24 @@
               %a{:rel => 'me', :href => 'http://github.com/adamstegman'} Github
     .content
       .container
-        %article
-          %hgroup
-            %h2= @item[:title]
-            - if @item[:subtitle]
-              %h3= @item[:subtitle]
+        %article{:class => base_identifier(@item)}
+          %header
+            %hgroup
+              - if @item[:deployed_url]
+                %h2
+                  %a{:href => @item[:deployed_url]}= @item[:title]
+              - else
+                %h2= @item[:title]
+              - if @item[:subtitle]
+                %h3= @item[:subtitle]
+            %p.status{:class => @item[:status]}= @item[:status]
+            %p.date
+              Started on
+              %time{:datetime => @item[:created_at], :pubdate => true}= @item[:created_at_text]
+            - if @item[:source_url]
+              %p.source
+                Open source.
+                %a{:href => @item[:source_url]} Code available here.
           = yield
     %footer
       .container

@@ -34,11 +34,28 @@ compile '/javascripts/*/' do
   end
 end
 
+compile '/projects/*/' do
+  if item[:extension] == 'haml'
+    filter :haml, haml_options
+    layout 'project'
+  elsif item[:extension] == 'md'
+    filter :maruku
+    layout 'project'
+  end
+end
+
 compile '*' do
-  if item[:extension] == 'haml' 
+  if item[:extension] == 'haml'
     filter :haml, haml_options
     layout 'default'
+  elsif item[:extension] == 'md'
+    filter :maruku
+    layout 'default'
   end
+end
+
+route '/images/favicon/' do
+  '/favicon.ico'
 end
 
 route '/images/*/' do
@@ -53,8 +70,12 @@ route '/javascripts/*/' do
   item.identifier.chop + '.js'
 end
 
-route '*' do
+route '/' do
   item.identifier + 'index.html'
+end
+
+route '*' do
+  item.identifier.chop + '.html'
 end
 
 layout '*', :haml, haml_options
