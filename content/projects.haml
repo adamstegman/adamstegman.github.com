@@ -9,18 +9,8 @@ title: Projects
 
   %h3 Deployed
   %ol.project-list.deployed
-    - sorted_projects_by_status(:deployed).each do |project|
-      %li
-        %article
-          %hgroup
-            %h4
-              = link_to(project[:title], project)
-            - if project[:subtitle]
-              %h5= project[:subtitle]
-          %footer
-            .published
-              Created on
-              %time{:datetime => project[:created_at], :pubdate => true}= project[:created_at_text]
+    = list_of(sorted_projects_by_status(:deployed)) do |project|
+      = render_partial(:project, project: project)
 
 %hr.project-activity
 
@@ -28,18 +18,8 @@ title: Projects
 
   %h3 Under Development
   %ol.project-list.development
-    - sorted_projects_by_status(:development).each do |project|
-      %li
-        %article
-          %hgroup
-            %h4
-              = link_to(project[:title], project)
-            - if project[:subtitle]
-              %h5= project[:subtitle]
-          %footer
-            .published
-              Created on
-              %time{:datetime => project[:created_at], :pubdate => true}= project[:created_at_text]
+    = list_of(sorted_projects_by_status(:development)) do |project|
+      = render_partial(:project, project: project)
 
 %hr.project-activity
 
@@ -47,18 +27,8 @@ title: Projects
 
   %h3 Retired
   %ol.project-list.retired
-    - sorted_projects_by_status(:retired).each do |project|
-      %li
-        %article
-          %hgroup
-            %h4
-              = link_to(project[:title], project)
-            - if project[:subtitle]
-              %h5= project[:subtitle]
-          %footer
-            .published
-              Created on
-              %time{:datetime => project[:created_at], :pubdate => true}= project[:created_at_text]
+    = list_of(sorted_projects_by_status(:retired)) do |project|
+      = render_partial(:project, project: project)
 
 %hr.project-activity
 
@@ -66,18 +36,8 @@ title: Projects
 
   %h3 Ideas
   %ol.project-list.ideas
-    - sorted_projects_by_status(:idea).each do |project|
-      %li
-        %article
-          %hgroup
-            %h4
-              = link_to(project[:title], project)
-            - if project[:subtitle]
-              %h5= project[:subtitle]
-          %footer
-            .published
-              Created on
-              %time{:datetime => project[:created_at], :pubdate => true}= project[:created_at_text]
+    = list_of(sorted_projects_by_status(:idea)) do |project|
+      = render_partial(:project, project: project)
 
 %hr.project-activity
 
@@ -85,15 +45,5 @@ title: Projects
 
   %h3 Back Burner
   %ol.project-list.back-burner
-    - sorted_projects_by_status(:'back-burner').each do |project|
-      %li
-        %article
-          %hgroup
-            %h4
-              = link_to(project[:title], project)
-            - if project[:subtitle]
-              %h5= project[:subtitle]
-          %footer
-            .published
-              Created on
-              %time{:datetime => project[:created_at], :pubdate => true}= project[:created_at_text]
+    = list_of(sorted_projects_by_status(:'back-burner')) do |project|
+      = render_partial(:project, project: project)

@@ -1,0 +1,10 @@
+%article.project
+  %hgroup
+    %h4
+      = link_to(project[:title], project)
+    - if project[:subtitle]
+      %h5= project[:subtitle]
+  %footer
+    .published
+      Created on
+      %time{:datetime => project[:created_at], :pubdate => true}= project[:created_at_text]
