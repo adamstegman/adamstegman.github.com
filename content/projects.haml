@@ -10,7 +10,7 @@ title: Projects
   %h3 Deployed
   %ol.project-list.deployed
     = list_of(sorted_projects_by_status(:deployed)) do |project|
-      = render_partial(:project, project: project)
+      = render '_project', project: project
 
 %hr.project-activity
 
@@ -19,7 +19,7 @@ title: Projects
   %h3 Under Development
   %ol.project-list.development
     = list_of(sorted_projects_by_status(:development)) do |project|
-      = render_partial(:project, project: project)
+      = render '_project', project: project
 
 %hr.project-activity
 
@@ -28,7 +28,7 @@ title: Projects
   %h3 Retired
   %ol.project-list.retired
     = list_of(sorted_projects_by_status(:retired)) do |project|
-      = render_partial(:project, project: project)
+      = render '_project', project: project
 
 %hr.project-activity
 
@@ -37,7 +37,7 @@ title: Projects
   %h3 Ideas
   %ol.project-list.ideas
     = list_of(sorted_projects_by_status(:idea)) do |project|
-      = render_partial(:project, project: project)
+      = render '_project', project: project
 
 %hr.project-activity
 
@@ -46,4 +46,4 @@ title: Projects
   %h3 Back Burner
   %ol.project-list.back-burner
     = list_of(sorted_projects_by_status(:'back-burner')) do |project|
-      = render_partial(:project, project: project)
+      = render '_project', project: project
