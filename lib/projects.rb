@@ -1,4 +1,4 @@
-# encoding: utf-8
+# coding: UTF-8
 
 module Nanoc3::Helpers
 
@@ -57,7 +57,22 @@ module Nanoc3::Helpers
     #                 +status+.
     def sorted_projects_by_status(status)
       status = status.to_s
-      sorted_projects.select {|project| project[:status] == status}
+      sorted_projects.select { |project| project[:status] == status }
+    end
+
+    # Returns a sorted list of projects that do not have the given +status+.
+    # Projects are sorted by descending creation date, so newer projects
+    # appear before older ones.
+    #
+    # @param [Symbol,String] status the status the desired projects do not have
+    #
+    # @return [Hash<String, Array>] a Hash with sorted arrays containing
+    #                               projects without the given +status+, keyed
+    #                               by the status.
+    def sorted_projects_without_status(status)
+      projects = sorted_projects.group_by { |project| project[:status] }
+      projects.delete status.to_s
+      projects
     end
 
     # Returns the project's identifier without namespacing.

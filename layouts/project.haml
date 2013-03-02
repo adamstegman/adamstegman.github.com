@@ -65,6 +65,20 @@
               %a{:rel => 'me', :href => 'http://profiles.google.com/adam.stegman'} Google Profile
             %li
               %a{:href => 'mailto:me@adamstegman.com'} Email me
+        %section.projects
+          %h2 Projects
+          %section{:class => "same-status #{@item[:status]}"}
+            %h3= titleize(@item[:status])
+            %ol.project-list
+              = list_of(sorted_projects_by_status(@item[:status])) do |project|
+                = render_partial(:project, project: project)
+          .different-status
+            - sorted_projects_without_status(@item[:status]).each do |status, projects|
+              %section{:class => status}
+                %h3= titleize(status)
+                %ol.project-list
+                  = list_of(projects) do |project|
+                    = render_partial(:project, project: project)
     :javascript
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-24951237-1']);
