@@ -83,8 +83,8 @@ kind: project
     The key configuration values are
     %code consumer_key
     and
-    %code consumer_secret
-    \.
+    = succeed('.') do
+      %code consumer_secret
     The others relate to Netflix API endpoints and will likely remain the same for a while.
 
   %h5 Netflix::Users
