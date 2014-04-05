@@ -27,7 +27,6 @@ GEM
     guard-nanoc (0.1.0)
       guard (>= 0.2.1)
       nanoc (>= 3.1.5)
-    haml (3.1.7)
     listen (0.6.0)
     lumberjack (1.0.2)
     maruku (0.6.1)
@@ -60,7 +59,6 @@ DEPENDENCIES
   growl
   guard
   guard-nanoc
-  haml
   maruku
   nanoc
   rake

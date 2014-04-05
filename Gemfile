@@ -9,8 +9,7 @@ gem 'nanoc'
 # For spawning a file server to preview the site
 gem 'adsf'
 
-# HAML, Compass, Markdown and Builder for handling all important formats
-gem 'haml'
+# Compass, Markdown and Builder for handling all important formats
 gem 'compass'
 gem 'maruku'
 gem 'builder'
