@@ -1,0 +1,46 @@
+---
+title: Deployer
+subtitle: Automatic project deployment based on push notifications
+source_url: https://github.com/adamstegman/Deployer
+status: idea
+created_at: 2011-07-30T01:58Z
+created_at_text: July 29, 2011
+kind: project
+---
+<section class="intro">
+  <img src="/images/deployer.png" alt="Deployer icon" width="27" height="24" class="logo"/>
+  <p>
+    Deployer is a Mac menubar application that automatically deploys a project when it receives a notification to do so.
+  </p>
+</section>
+
+<section class="description">
+  <p>
+    Previously my blog was on <a href="http://adamstegman.tumblr.com/">Tumblr</a>, so I could update it from anywhere using the <a href="http://itunes.apple.com/us/app/tumblr/id305343404?mt=8">iPhone application</a>.
+    Now, since I host my <a href="/">website</a> and <a href="http://blog.adamstegman.com/">blog</a> myself now and keep all the code on <a href="https://github.com/adamstegman/adamstegman">Github</a>, I need to keep on top of updates.
+  </p>
+  <p>
+    To do that, I want to be able to write a post from anywhere.
+    I found the right platform in <a href="https://github.com/meskyanichi/nanoc-heroku">Nanoc::Heroku</a> which you can read more about on the <a href="/projects/adamstegman.html">AdamStegman.com project page</a>.
+    Nanoc::Heroku supports <a href="http://daringfireball.net/projects/markdown/">Markdown</a> pages, which I could easily write from my iPhone or iPad.
+  </p>
+  <p>
+    Unfortunately, there are two key steps missing once I've written something on a mobile device.
+  </p>
+  <ul>
+    <li>Commit the post to Github</li>
+    <li>Run the deploy script</li>
+  </ul>
+  <p>
+    Currently, neither of those is possible from an iOS device (as far as I can tell).
+    To remedy this, I'm writing an application for each.
+    I'm starting with the less ambitious of the two, running the deploy script.
+  </p>
+  <p>
+    Using a service hook from Github, I hope to receive commit notifications and automatically update and deploy the website without any interaction on my part.
+  </p>
+  <p>
+    I don't know yet how I will receive the notifications.
+    <a href="http://boxcar.io">Boxcar</a> has a <a href="http://boxcar.io/help/api/stream">stream API</a> but I'm not sure yet if that will work.
+  </p>
+</section>

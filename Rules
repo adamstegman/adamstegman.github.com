@@ -4,7 +4,6 @@ require 'compass'
 Compass.add_project_configuration './config/compass.rb'
 
 sass_options = Compass.sass_engine_options
-haml_options = { :format => :html5 }
 
 # A few helpful tips about the Rules file:
 #
@@ -15,6 +14,8 @@ haml_options = { :format => :html5 }
 #   “content/about.html”). To select all children, grandchildren, … of an
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
+
+layout '*', :erb
 
 compile '/stylesheets/*/' do
   case item[:extension]
@@ -35,21 +36,23 @@ compile '/javascripts/*/' do
 end
 
 compile '/projects/*/' do
-  if item[:extension] == 'haml'
-    filter :haml, haml_options
-    layout 'project'
-  elsif item[:extension] == 'md'
-    filter :maruku
+  unless item.binary?
+    if item[:extension] == 'html.erb'
+      filter :erb
+    elsif item[:extension] == 'md'
+      filter :maruku
+    end
     layout 'project'
   end
 end
 
 compile '*' do
-  if item[:extension] == 'haml'
-    filter :haml, haml_options
-    layout 'default'
-  elsif item[:extension] == 'md'
-    filter :maruku
+  unless item.binary?
+    if item[:extension] == 'html.erb'
+      filter :erb
+    elsif item[:extension] == 'md'
+      filter :maruku
+    end
     layout 'default'
   end
 end
@@ -77,5 +80,3 @@ end
 route '*' do
   item.identifier.chop + '.html'
 end
-
-layout '*', :haml, haml_options

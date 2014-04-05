@@ -1,0 +1,62 @@
+---
+title: Projects
+---
+<p>
+  I tend to work on projects that address needs that I have.
+  For now I'm not shooting for income, but rather enjoyment and personal utility.
+</p>
+
+<hr class="project-activity">
+
+<section class="deployed">
+  <h3>Deployed</h3>
+  <ol class="project-list deployed">
+    <% sorted_projects_by_status(:deployed).each do |project| %>
+      <li><%= render '_project', project: project %></li>
+    <% end %>
+  </ol>
+</section>
+
+<hr class="project-activity">
+
+<section class="development">
+  <h3>Under Development</h3>
+  <ol class="project-list development">
+    <% sorted_projects_by_status(:development).each do |project| %>
+      <li><%= render '_project', project: project %></li>
+    <% end %>
+  </ol>
+</section>
+
+<hr class="project-activity">
+
+<section class="retired">
+  <h3>Retired</h3>
+  <ol class="project-list retired">
+    <% sorted_projects_by_status(:retired).each do |project| %>
+      <li><%= render '_project', project: project %></li>
+    <% end %>
+  </ol>
+</section>
+
+<hr class="project-activity">
+
+<section class="ideas">
+  <h3>Ideas</h3>
+  <ol class="project-list idea">
+    <% sorted_projects_by_status(:idea).each do |project| %>
+      <li><%= render '_project', project: project %></li>
+    <% end %>
+  </ol>
+</section>
+
+<hr class="project-activity">
+
+<section class="back-burner">
+  <h3>Back Burner</h3>
+  <ol class="project-list back-burner">
+    <% sorted_projects_by_status(:'back-burner').each do |project| %>
+      <li><%= render '_project', project: project %></li>
+    <% end %>
+  </ol>
+</section>
