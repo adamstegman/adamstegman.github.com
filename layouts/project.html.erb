@@ -45,11 +45,17 @@
             <h3><%= @item[:subtitle] %></h3>
             <% end %>
           </hgroup>
+          <% unless @item[:status] == "deployed" %>
           <p class="status <%= @item[:status] %>">
             <%= @item[:status] %>
           </p>
+          <% end %>
           <p class="date">
+          <% if @item[:status] == "contracted" %>
+            <%= @item[:dates_worked_on] %>
+          <% else %>
             Started on <time datetime="<%= @item[:created_at] %>" pubdate="true"><%= @item[:created_at_text] %></time>
+          <% end %>
           </p>
           <% if @item[:source_url] %>
           <p class="source">
@@ -79,7 +85,7 @@
           <ol class="project-list">
             <% sorted_projects_by_status(@item[:status]).each do |project| %>
               <li>
-                <%= render '_project', project: project %>
+                <%= render project_partial(project), project: project %>
               </li>
             <% end %>
           </ol>
@@ -91,7 +97,7 @@
               <ol class="project-list">
                 <% projects.each do |project| %>
                   <li>
-                    <%= render '_project', project: project %>
+                    <%= render project_partial(project), project: project %>
                   </li>
                 <% end %>
               </ol>

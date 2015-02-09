@@ -27,6 +27,8 @@ module Nanoc3::Helpers
   module Projects
     include Blogging
 
+    PRESENT ||= Time.now
+
     # Returns an unsorted list of projects, i.e. items where the `kind`
     # attribute is set to `"project"`.
     #
@@ -47,13 +49,17 @@ module Nanoc3::Helpers
 
     # Returns a sorted list of projects, i.e. items where the `kind`
     # attribute is set to `"project"`. Projects are sorted by descending
-    # creation date, so newer projects appear before older ones.
+    # ended_at, so more recent projects appear before older ones.
+    # 
+    # Projects with no ended_at are assumed to still be in progress, so they
+    # will be first.
     #
     # @return [Array] A sorted array containing all projects
     def sorted_projects
       require 'time'
       projects.sort_by do |project|
-        attribute_to_time(project[:created_at])
+        ended_at = project[:ended_at] || PRESENT
+        attribute_to_time(ended_at)
       end.reverse
     end
 
@@ -96,6 +102,14 @@ module Nanoc3::Helpers
     def base_identifier(project)
       match = /([^\/]+)\/\Z/.match(project.identifier)
       match[1] if match
+    end
+
+    def project_partial(project)
+      if project[:status] == "contracted"
+        "_contracted_project"
+      else
+        "_project"
+      end
     end
   end
 end

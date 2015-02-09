@@ -1,0 +1,12 @@
+<article class="project">
+  <hgroup>
+    <h4><%= link_to(project[:title], project) %></h4>
+    <% if project[:subtitle] %>
+    <h5><%= project[:subtitle] %></h5>
+    <% end %>
+  </hgroup>
+  <footer>
+    <section class="published"><%= project[:dates_worked_on] %></section>
+  </footer>
+</article>
+

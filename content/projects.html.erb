@@ -1,19 +1,31 @@
 ---
 title: Projects
 ---
-<p>
-  I tend to work on projects that address needs that I have.
-  For now I'm not shooting for income, but rather enjoyment and personal utility.
-</p>
+<% if any_projects_with_status?(:contracted) %>
+<hr class="project-activity">
+
+<section class="development">
+  <h3>Contracted Work</h3>
+  <ol class="project-list contracted">
+    <% sorted_projects_by_status(:contracted).each do |project| %>
+      <li><%= render project_partial(project), project: project %></li>
+    <% end %>
+  </ol>
+</section>
+<% end %>
 
 <% if any_projects_with_status?(:deployed) %>
 <hr class="project-activity">
 
 <section class="deployed">
-  <h3>Deployed</h3>
+  <p>
+    When it comes to personal projects, I tend to work on projects that address needs that I have.
+    For now I'm not shooting for income, but rather enjoyment and personal utility.
+  </p>
+
   <ol class="project-list deployed">
     <% sorted_projects_by_status(:deployed).each do |project| %>
-      <li><%= render '_project', project: project %></li>
+      <li><%= render project_partial(project), project: project %></li>
     <% end %>
   </ol>
 </section>
@@ -26,7 +38,7 @@ title: Projects
   <h3>Under Development</h3>
   <ol class="project-list development">
     <% sorted_projects_by_status(:development).each do |project| %>
-      <li><%= render '_project', project: project %></li>
+      <li><%= render project_partial(project), project: project %></li>
     <% end %>
   </ol>
 </section>
@@ -39,7 +51,7 @@ title: Projects
   <h3>Retired</h3>
   <ol class="project-list retired">
     <% sorted_projects_by_status(:retired).each do |project| %>
-      <li><%= render '_project', project: project %></li>
+      <li><%= render project_partial(project), project: project %></li>
     <% end %>
   </ol>
 </section>
