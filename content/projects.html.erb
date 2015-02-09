@@ -6,6 +6,7 @@ title: Projects
   For now I'm not shooting for income, but rather enjoyment and personal utility.
 </p>
 
+<% if any_projects_with_status?(:deployed) %>
 <hr class="project-activity">
 
 <section class="deployed">
@@ -16,7 +17,9 @@ title: Projects
     <% end %>
   </ol>
 </section>
+<% end %>
 
+<% if any_projects_with_status?(:development) %>
 <hr class="project-activity">
 
 <section class="development">
@@ -27,7 +30,9 @@ title: Projects
     <% end %>
   </ol>
 </section>
+<% end %>
 
+<% if any_projects_with_status?(:retired) %>
 <hr class="project-activity">
 
 <section class="retired">
@@ -38,25 +43,4 @@ title: Projects
     <% end %>
   </ol>
 </section>
-
-<hr class="project-activity">
-
-<section class="ideas">
-  <h3>Ideas</h3>
-  <ol class="project-list idea">
-    <% sorted_projects_by_status(:idea).each do |project| %>
-      <li><%= render '_project', project: project %></li>
-    <% end %>
-  </ol>
-</section>
-
-<hr class="project-activity">
-
-<section class="back-burner">
-  <h3>Back Burner</h3>
-  <ol class="project-list back-burner">
-    <% sorted_projects_by_status(:'back-burner').each do |project| %>
-      <li><%= render '_project', project: project %></li>
-    <% end %>
-  </ol>
-</section>
+<% end %>

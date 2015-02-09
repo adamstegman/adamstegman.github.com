@@ -35,6 +35,16 @@ module Nanoc3::Helpers
       @items.select { |item| item[:kind] == 'project' }
     end
 
+    # Returns whether there exist any projects that have the given +status+.
+    #
+    # @param [Symbol,String] status the status of the desired projects
+    #
+    # @return [Boolean] whether there exist any projects that have the given +status+.
+    def any_projects_with_status?(status)
+      status = status.to_s
+      sorted_projects.any? { |project| project[:status] == status }
+    end
+
     # Returns a sorted list of projects, i.e. items where the `kind`
     # attribute is set to `"project"`. Projects are sorted by descending
     # creation date, so newer projects appear before older ones.
