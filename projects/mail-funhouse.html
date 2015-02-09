@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="keywords" content=""/>
   <meta name="description" content=""/>
-  <title>Deployer: Automatic project deployment based on push notifications - Adam Stegman</title>
+  <title>Mail Funhouse: Mock SMTP server for catching mail - Adam Stegman</title>
   <link type="image/vnd.microsoft.icon" href="/favicon.ico" rel="icon"/>
   <link type="text/css" href="/stylesheets/application.css" rel="stylesheet"/>
   
@@ -31,63 +31,39 @@
   </header>
   <div class="content">
     <div class="container">
-      <article class="deployer">
+      <article class="mail-funhouse">
         <header>
           <hgroup>
             
-            <h2>Deployer</h2>
+            <h2>Mail Funhouse</h2>
             
             
-            <h3>Automatic project deployment based on push notifications</h3>
+            <h3>Mock SMTP server for catching mail</h3>
             
           </hgroup>
-          <p class="status idea">
-            idea
-          </p>
-          <p class="date">
-            Started on <time datetime="2011-07-30T01:58Z" pubdate="true">July 29, 2011</time>
+          
+          <p class="status contracted">
+            contracted
           </p>
           
-          <p class="source">
-            Open source. <a href="https://github.com/adamstegman/Deployer">Code available here</a>.
+          <p class="date">
+          
+            May 2011 - August 2011
+          
           </p>
           
         </header>
         <section class="intro">
-  <img src="/images/deployer.png" alt="Deployer icon" width="27" height="24" class="logo"/>
   <p>
-    Deployer is a Mac menubar application that automatically deploys a project when it receives a notification to do so.
+    Mail Funhouse was a mail catcher written to test email delivery functionality in a staging environment.
   </p>
 </section>
 
 <section class="description">
   <p>
-    Previously my blog was on <a href="http://adamstegman.tumblr.com/">Tumblr</a>, so I could update it from anywhere using the <a href="http://itunes.apple.com/us/app/tumblr/id305343404?mt=8">iPhone application</a>.
-    Now, since I host my <a href="/">website</a> and <a href="http://blog.adamstegman.com/">blog</a> myself now and keep all the code on <a href="https://github.com/adamstegman/adamstegman">Github</a>, I need to keep on top of updates.
-  </p>
-  <p>
-    To do that, I want to be able to write a post from anywhere.
-    I found the right platform in <a href="https://github.com/meskyanichi/nanoc-heroku">Nanoc::Heroku</a> which you can read more about on the <a href="/projects/adamstegman.html">AdamStegman.com project page</a>.
-    Nanoc::Heroku supports <a href="http://daringfireball.net/projects/markdown/">Markdown</a> pages, which I could easily write from my iPhone or iPad.
-  </p>
-  <p>
-    Unfortunately, there are two key steps missing once I've written something on a mobile device.
-  </p>
-  <ul>
-    <li>Commit the post to Github</li>
-    <li>Run the deploy script</li>
-  </ul>
-  <p>
-    Currently, neither of those is possible from an iOS device (as far as I can tell).
-    To remedy this, I'm writing an application for each.
-    I'm starting with the less ambitious of the two, running the deploy script.
-  </p>
-  <p>
-    Using a service hook from Github, I hope to receive commit notifications and automatically update and deploy the website without any interaction on my part.
-  </p>
-  <p>
-    I don't know yet how I will receive the notifications.
-    <a href="http://boxcar.io">Boxcar</a> has a <a href="http://boxcar.io/help/api/stream">stream API</a> but I'm not sure yet if that will work.
+    Its core event loop consisted of a state machine driven by a TCP server and was written in Ruby.
+    It stored emails sent and displayed them on a simple web application.
+    Emails were indexed for search using a simple Solr index.
   </p>
 </section>
       </article>
@@ -106,22 +82,116 @@
       </section>
       <section class="projects">
         <h2>Projects</h2>
-        <section class="same-status idea">
-          <h3>Idea</h3>
+        <section class="same-status contracted">
+          <h3>Contracted</h3>
           <ol class="project-list">
             
               <li>
                 <article class="project">
   <hgroup>
-    <h4><a href="/projects/deployer.html">Deployer</a></h4>
+    <h4><a href="/projects/pivotal-cloud-ops.html">Pivotal Cloud Ops</a></h4>
     
-    <h5>Automatic project deployment based on push notifications</h5>
+    <h5>Operations for the publicly-accessible Pivotal deployment of Cloud Foundry</h5>
     
   </hgroup>
   <footer>
-    <section class="published">
-      Created on <time datetime="2011-07-30T01:58Z" pubdate="true">July 29, 2011</time>
-    </section>
+    <section class="published">October 2014 - present</section>
+  </footer>
+</article>
+
+
+              </li>
+            
+              <li>
+                <article class="project">
+  <hgroup>
+    <h4><a href="/projects/bosh.html">BOSH</a></h4>
+    
+    <h5>An open source tool chain for release engineering, deployment and lifecycle management of large scale distributed services</h5>
+    
+  </hgroup>
+  <footer>
+    <section class="published">February 2014 - October 2014</section>
+  </footer>
+</article>
+
+
+              </li>
+            
+              <li>
+                <article class="project">
+  <hgroup>
+    <h4><a href="/projects/cerner-population-health.html">Cerner Population Health</a></h4>
+    
+    <h5>A suite of web applications enabling large-scale health care.</h5>
+    
+  </hgroup>
+  <footer>
+    <section class="published">January 2013 - September 2013</section>
+  </footer>
+</article>
+
+
+              </li>
+            
+              <li>
+                <article class="project">
+  <hgroup>
+    <h4><a href="/projects/cerner-chart-search.html">Cerner Chart Search</a></h4>
+    
+    <h5>Semantic search of provider notes in medical records</h5>
+    
+  </hgroup>
+  <footer>
+    <section class="published">July 2011 - January 2013</section>
+  </footer>
+</article>
+
+
+              </li>
+            
+              <li>
+                <article class="project">
+  <hgroup>
+    <h4><a href="/projects/cerner-millennium-plus.html">Cerner Millennium+</a></h4>
+    
+    <h5>A new platform for electronic medical software</h5>
+    
+  </hgroup>
+  <footer>
+    <section class="published">January 2012 - January 2013</section>
+  </footer>
+</article>
+
+
+              </li>
+            
+              <li>
+                <article class="project">
+  <hgroup>
+    <h4><a href="/projects/mail-funhouse.html">Mail Funhouse</a></h4>
+    
+    <h5>Mock SMTP server for catching mail</h5>
+    
+  </hgroup>
+  <footer>
+    <section class="published">May 2011 - August 2011</section>
+  </footer>
+</article>
+
+
+              </li>
+            
+              <li>
+                <article class="project">
+  <hgroup>
+    <h4><a href="/projects/cerner-store.html">Cerner Store</a></h4>
+    
+    <h5>Online storefront for Cerner clients to purchase from and publish to</h5>
+    
+  </hgroup>
+  <footer>
+    <section class="published">July 2009 - July 2011</section>
   </footer>
 </article>
 
@@ -131,92 +201,6 @@
           </ol>
         </section>
         <div class="different-status">
-          
-            <section class="development">
-              <h3>Development</h3>
-              <ol class="project-list">
-                
-                  <li>
-                    <article class="project">
-  <hgroup>
-    <h4><a href="/projects/photo-albums.html">Photo Albums</a></h4>
-    
-    <h5>Yet another photo storage application, but this one does exactly what we want.</h5>
-    
-  </hgroup>
-  <footer>
-    <section class="published">
-      Created on <time datetime="2013-12-30T00:48Z" pubdate="true">December 29, 2013</time>
-    </section>
-  </footer>
-</article>
-
-
-                  </li>
-                
-              </ol>
-            </section>
-          
-            <section class="back-burner">
-              <h3>Back Burner</h3>
-              <ol class="project-list">
-                
-                  <li>
-                    <article class="project">
-  <hgroup>
-    <h4><a href="/projects/baby-alarm.html">Baby Alarm for iOS</a></h4>
-    
-    <h5>Indicate time to a toddler</h5>
-    
-  </hgroup>
-  <footer>
-    <section class="published">
-      Created on <time datetime="2012-05-13T03:09Z" pubdate="true">May 12, 2012</time>
-    </section>
-  </footer>
-</article>
-
-
-                  </li>
-                
-                  <li>
-                    <article class="project">
-  <hgroup>
-    <h4><a href="/projects/git-push.html">Git Push for iOS</a></h4>
-    
-    <h5>Push changes to a Github repository from iOS</h5>
-    
-  </hgroup>
-  <footer>
-    <section class="published">
-      Created on <time datetime="2011-07-30T01:58Z" pubdate="true">July 29, 2011</time>
-    </section>
-  </footer>
-</article>
-
-
-                  </li>
-                
-                  <li>
-                    <article class="project">
-  <hgroup>
-    <h4><a href="/projects/web-queue.html">Web Queue</a></h4>
-    
-    <h5>Better Netflix queue management on any device</h5>
-    
-  </hgroup>
-  <footer>
-    <section class="published">
-      Created on <time datetime="2010-08-22T03:20Z" pubdate="true">August 21, 2010</time>
-    </section>
-  </footer>
-</article>
-
-
-                  </li>
-                
-              </ol>
-            </section>
           
             <section class="deployed">
               <h3>Deployed</h3>
@@ -275,9 +259,88 @@
               </ol>
             </section>
           
+            <section class="development">
+              <h3>Development</h3>
+              <ol class="project-list">
+                
+                  <li>
+                    <article class="project">
+  <hgroup>
+    <h4><a href="/projects/photo-albums.html">Photo Albums</a></h4>
+    
+    <h5>Yet another photo storage application, but this one does exactly what we want.</h5>
+    
+  </hgroup>
+  <footer>
+    <section class="published">
+      Created on <time datetime="2013-12-30T00:48Z" pubdate="true">December 29, 2013</time>
+    </section>
+  </footer>
+</article>
+
+
+                  </li>
+                
+              </ol>
+            </section>
+          
             <section class="retired">
               <h3>Retired</h3>
               <ol class="project-list">
+                
+                  <li>
+                    <article class="project">
+  <hgroup>
+    <h4><a href="/projects/git-push.html">Git Push for iOS</a></h4>
+    
+    <h5>Push changes to a Github repository from iOS</h5>
+    
+  </hgroup>
+  <footer>
+    <section class="published">
+      Created on <time datetime="2011-07-30T01:58Z" pubdate="true">July 29, 2011</time>
+    </section>
+  </footer>
+</article>
+
+
+                  </li>
+                
+                  <li>
+                    <article class="project">
+  <hgroup>
+    <h4><a href="/projects/kid-klock.html">Kid Klock for iOS</a></h4>
+    
+    <h5>Indicate time to a toddler</h5>
+    
+  </hgroup>
+  <footer>
+    <section class="published">
+      Created on <time datetime="2012-05-13T03:09Z" pubdate="true">May 12, 2012</time>
+    </section>
+  </footer>
+</article>
+
+
+                  </li>
+                
+                  <li>
+                    <article class="project">
+  <hgroup>
+    <h4><a href="/projects/web-queue.html">Web Queue</a></h4>
+    
+    <h5>Better Netflix queue management on any device</h5>
+    
+  </hgroup>
+  <footer>
+    <section class="published">
+      Created on <time datetime="2010-08-22T03:20Z" pubdate="true">August 21, 2010</time>
+    </section>
+  </footer>
+</article>
+
+
+                  </li>
                 
                   <li>
                     <article class="project">
