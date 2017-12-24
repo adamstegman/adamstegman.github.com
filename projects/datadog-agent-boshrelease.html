@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="keywords" content=""/>
   <meta name="description" content=""/>
-  <title>Cerner Store: Online storefront for Cerner clients to purchase from and publish to - Adam Stegman</title>
+  <title>datadog-agent-boshrelease: BOSH Release for datadog-agent - Adam Stegman</title>
   <link type="image/vnd.microsoft.icon" href="/favicon.ico" rel="icon"/>
   <link type="text/css" href="/stylesheets/application.css" rel="stylesheet"/>
   
@@ -31,14 +31,14 @@
   </header>
   <div class="content">
     <div class="container">
-      <article class="cerner-store">
+      <article class="datadog-agent-boshrelease">
         <header>
           <hgroup>
             
-            <h2><a href="https://store.cerner.com">Cerner Store</a></h2>
+            <h2>datadog-agent-boshrelease</h2>
             
             
-            <h3>Online storefront for Cerner clients to purchase from and publish to</h3>
+            <h3>BOSH Release for datadog-agent</h3>
             
           </hgroup>
           
@@ -48,23 +48,33 @@
           
           <p class="date">
           
-            July 2009 - July 2011
+            August 2016 - April 2017
           
+          </p>
+          
+          <p class="source">
+            Open source. <a href="https://github.com/onemedical/datadog-agent-boshrelease">Code available here</a>.
           </p>
           
         </header>
         <section class="intro">
-  <img src="/images/cerner-store.png" alt="Cerner Store Icon" width="40" height="36" class="logo"/>
+  <img src="/images/datadog.png" alt="Datadog Logo" width="256" height="128" class="logo"/>
   <p>
-    The Cerner Store is an online storefront that enables Cerner clients to purchase some Cerner solutions and publish their own work built on top of Cerner solutions.
+    To collect metrics from BOSH-deployed machines, I packaged a BOSH release of the <a href="https://www.datadoghq.com">Datadog</a> agent.
   </p>
 </section>
 
 <section class="description">
   <p>
-    A Rails application written to support the then-new CSS3 and still support IE6 as the most popular browser.
-    It accepts user-written content and handles user accounts with Oauth.
-    Items are indexed for search using Solr.
+    We already used <a href="http://bosh.io">BOSH</a> to deploy distributed systems like Elasticsearch, so when we switched our metrics provider to Datadog, we needed to install the agent on our BOSH-deployed machines.
+    Writing a BOSH release is how software is packaged for BOSH, so I broke down the automated setup for the Linux agent and re-automated it in the packaging script.
+  </p>
+  <p>
+    I added configuration support for a few useful features, like AWS tags and agent integrations.
+  </p>
+  <p>
+    I took a small shortcut and used the Ubuntu python packages instead of re-packaging python.
+    I may revisit that choice when BOSH supports sharing packages between releases.
   </p>
 </section>
       </article>

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="keywords" content=""/>
   <meta name="description" content=""/>
-  <title>Cerner Store: Online storefront for Cerner clients to purchase from and publish to - Adam Stegman</title>
+  <title>elasticsearch-plugins-boshrelease: BOSH Release for Elasticsearch plugins: Shield and License - Adam Stegman</title>
   <link type="image/vnd.microsoft.icon" href="/favicon.ico" rel="icon"/>
   <link type="text/css" href="/stylesheets/application.css" rel="stylesheet"/>
   
@@ -31,14 +31,14 @@
   </header>
   <div class="content">
     <div class="container">
-      <article class="cerner-store">
+      <article class="elasticsearch-plugins-boshrelease">
         <header>
           <hgroup>
             
-            <h2><a href="https://store.cerner.com">Cerner Store</a></h2>
+            <h2>elasticsearch-plugins-boshrelease</h2>
             
             
-            <h3>Online storefront for Cerner clients to purchase from and publish to</h3>
+            <h3>BOSH Release for Elasticsearch plugins: Shield and License</h3>
             
           </hgroup>
           
@@ -48,23 +48,36 @@
           
           <p class="date">
           
-            July 2009 - July 2011
+            February 2016 - June 2016
           
+          </p>
+          
+          <p class="source">
+            Open source. <a href="https://github.com/onemedical/elasticsearch-plugins-boshrelease">Code available here</a>.
           </p>
           
         </header>
         <section class="intro">
-  <img src="/images/cerner-store.png" alt="Cerner Store Icon" width="40" height="36" class="logo"/>
+  <img src="/images/elasticsearch.png" alt="Elasticsearch Logo" width="228" height="119" class="logo"/>
   <p>
-    The Cerner Store is an online storefront that enables Cerner clients to purchase some Cerner solutions and publish their own work built on top of Cerner solutions.
+    I wrote a <a href="http://bosh.io">BOSH</a> release to setup the Shield and License plugins for Elasticsearch on top of the logsearch BOSH release.
   </p>
 </section>
 
 <section class="description">
   <p>
-    A Rails application written to support the then-new CSS3 and still support IE6 as the most popular browser.
-    It accepts user-written content and handles user accounts with Oauth.
-    Items are indexed for search using Solr.
+    We deployed <a href="https://www.elastic.co/products/elasticsearch">Elasticsearch</a> using the <a href="https://github.com/logsearch/logsearch-boshrelease">logsearch-boshrelease</a>, but needed to support plugins such as <a href="https://www.elastic.co/products/x-pack/security">Shield</a> and License.
+    Unlike simpler plugins, Shield and License require additional configuration, in Shield's case multiple steps of configuration.
+  </p>
+  <p>
+    I determined that plugin setup was out of scope for the logsearch release, so I needed to write my own.
+    Forking the release to add plugin support was an option, but I wanted to ensure we could still use upstream updates to Elasticsearch.
+    Plugin setup is mostly out-of-band with Elasticsearch setup, except the need to restart Elasticsearch.
+  </p>
+  <p>
+    Shield adds support for authorization and SSL to Elasticsearch, and we needed both features to keep patient information protected and encrypted at all times.
+    Authorization was fairly straightforward, but SSL was a bear.
+    Elastic support helped me figure out nuances of Java SSL setup and Elasticsearch's needs specifically.
   </p>
 </section>
       </article>

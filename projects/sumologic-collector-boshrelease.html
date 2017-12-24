@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="keywords" content=""/>
   <meta name="description" content=""/>
-  <title>Cerner Store: Online storefront for Cerner clients to purchase from and publish to - Adam Stegman</title>
+  <title>sumologic-collector-boshrelease: BOSH Release for Sumo Logic Collector - Adam Stegman</title>
   <link type="image/vnd.microsoft.icon" href="/favicon.ico" rel="icon"/>
   <link type="text/css" href="/stylesheets/application.css" rel="stylesheet"/>
   
@@ -31,14 +31,14 @@
   </header>
   <div class="content">
     <div class="container">
-      <article class="cerner-store">
+      <article class="sumologic-collector-boshrelease">
         <header>
           <hgroup>
             
-            <h2><a href="https://store.cerner.com">Cerner Store</a></h2>
+            <h2>sumologic-collector-boshrelease</h2>
             
             
-            <h3>Online storefront for Cerner clients to purchase from and publish to</h3>
+            <h3>BOSH Release for Sumo Logic Collector</h3>
             
           </hgroup>
           
@@ -48,23 +48,29 @@
           
           <p class="date">
           
-            July 2009 - July 2011
+            February 2016 - May 2017
           
+          </p>
+          
+          <p class="source">
+            Open source. <a href="https://github.com/onemedical/sumologic-collector-boshrelease">Code available here</a>.
           </p>
           
         </header>
         <section class="intro">
-  <img src="/images/cerner-store.png" alt="Cerner Store Icon" width="40" height="36" class="logo"/>
+  <img src="/images/sumologic.png" alt="Sumo Logic Logo" width="295" height="54" class="logo"/>
   <p>
-    The Cerner Store is an online storefront that enables Cerner clients to purchase some Cerner solutions and publish their own work built on top of Cerner solutions.
+    To aggregate logs from BOSH-deployed machines, I packaged a BOSH release of the <a href="https://www.sumologic.com">Sumo Logic</a> collector.
   </p>
 </section>
 
 <section class="description">
   <p>
-    A Rails application written to support the then-new CSS3 and still support IE6 as the most popular browser.
-    It accepts user-written content and handles user accounts with Oauth.
-    Items are indexed for search using Solr.
+    We already used Sumo Logic to aggregate our logs, so when we began deploying Elasticsearch with <a href="http://bosh.io">BOSH</a>, we wanted to aggregate those logs too.
+    Writing a BOSH release is how software is packaged for BOSH, so I automated the Linux collector setup in the packaging script.
+  </p>
+  <p>
+    Later I added configuration to support a hosted collector so we could point syslog sources to a host that would forward logs to Sumo Logic.
   </p>
 </section>
       </article>
