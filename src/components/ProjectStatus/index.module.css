@@ -1,0 +1,23 @@
+.status {
+  composes: splash-text from '../../layouts/index.module.css';
+  display: inline-block;
+  margin: 0 0 0.79rem;
+  padding: .5rem;
+  text-transform: uppercase;
+}
+
+.contracted {
+  background: black;
+}
+
+.deployed {
+  composes: splash from '../../layouts/index.module.css';
+}
+
+.development {
+  background: #c90009;
+}
+
+.retired {
+  background: #6a4724;
+}

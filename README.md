@@ -1,5 +1,5 @@
 # Adam Stegman
 
-This is my personal website. It contains information about me, which will eventually include a bio, projects, and possibly a resume-like structure.
+This is my personal website. It contains information about me, which includes a bio, projects, and a résumé.
 
-Based on [nanoc-gh-pages](https://github.com/adamstegman/nanoc-gh-pages).
+Built on [Gatsby](https://www.gatsbyjs.org).

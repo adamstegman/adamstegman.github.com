@@ -1,0 +1,41 @@
+.footer {
+  composes: header from '../Header/index.module.css';
+}
+
+.logo {
+  composes: logo from '../Header/index.module.css';
+}
+
+.h2, .h3 {
+  composes: splash-text from '../../layouts/index.module.css';
+  margin-top: 0;
+}
+.h4, .h5 {
+  composes: h3;
+  margin-bottom: 0.33rem;
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-item {
+  margin: 0;
+}
+.nav-link {
+  composes: nav-link from '../Header/index.module.css';
+}
+
+.link {
+  composes: nav-link;
+}
+.footer {
+  composes: splash-text from '../../layouts/index.module.css';
+}
+
+.section {
+  margin: 0 .79rem 1.58rem 0;
+  flex-basis: 0;
+  flex-grow: 1;
+}
