@@ -3,6 +3,7 @@ import Link from 'gatsby-link';
 
 import Atom from '../../assets/atom.svg';
 import Container from '../Container';
+import resume from '../../assets/resume.pdf';
 import styles from './index.module.css';
 
 const Header = () => (
@@ -27,6 +28,9 @@ const Header = () => (
           </li>
           <li className={styles['nav-item']}>
             <a href="//blog.adamstegman.com" className={styles['nav-link']}>My Kind of Stupid (Blog)</a>
+          </li>
+          <li className={styles['nav-item']}>
+            <a href={resume} className={styles['nav-link']}>Résumé</a>
           </li>
           <li className={styles['nav-item']}>
             <a href="//twitter.com/adamstegman" className={styles['nav-link']}>Twitter</a>
