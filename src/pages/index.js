@@ -5,9 +5,9 @@ import Container from '../components/Container';
 import profilePic from '../assets/adamstegman.jpg';
 import styles from './index.module.css';
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Container>
-    <Helmet title={"About Me - Adam Stegman"}></Helmet>
+    <Helmet title={`About Me - ${data.site.siteMetadata.title}`}></Helmet>
     <h2>About Me</h2>
     <section>
       <img src={profilePic} className={styles['profile-pic']} width="200" alt="Adam Stegman" />
@@ -77,3 +77,13 @@ const IndexPage = () => (
 );
 
 export default IndexPage;
+
+export const query = graphql`
+  query AboutMeQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`

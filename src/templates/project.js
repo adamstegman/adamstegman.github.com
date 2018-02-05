@@ -16,7 +16,7 @@ export default ({ data }) => {
   }
   return (
     <Container>
-      <Helmet title={`${project.title}: ${project.subtitle} - Adam Stegman`}></Helmet>
+      <Helmet title={`${project.title}: ${project.subtitle} - ${data.site.siteMetadata.title}`}></Helmet>
       <article>
         <header className={styles.header}>
           <hgroup className={styles['header-text']}>
@@ -49,6 +49,11 @@ export const query = graphql`
           endedAt(formatString: "MMMM YYYY")
           sourceUrl
         }
+      }
+    }
+    site {
+      siteMetadata {
+        title
       }
     }
   }

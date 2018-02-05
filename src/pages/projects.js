@@ -28,7 +28,7 @@ export default ({ data }) => {
 
   return (
     <Container>
-      <Helmet title={"Projects - Adam Stegman"}></Helmet>
+      <Helmet title={`Projects - ${data.site.siteMetadata.title}`}></Helmet>
       <h2>Projects</h2>
       {sections.reduce((prev, current, index) => [prev, <hr key={index} />, current])}
     </Container>
@@ -55,6 +55,11 @@ export const query = graphql`
             }
           }
         }
+      }
+    }
+    site {
+      siteMetadata {
+        title
       }
     }
   }
