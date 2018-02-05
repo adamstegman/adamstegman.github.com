@@ -1,0 +1,7 @@
+.horizontal-layout {
+  display: flex;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}

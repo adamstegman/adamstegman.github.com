@@ -3,34 +3,21 @@ import Helmet from 'react-helmet';
 
 import Container from '../components/Container';
 import Projects from '../components/Projects';
+import SortedProjects from '../utils/SortedProjects';
 
 export default ({ data }) => {
-  const projectsByStatus = data.allMarkdownRemark.edges.reduce((projects, { node }) => {
-    const project = node.fields.project
-    if (!projects[project.status]) {
-      projects[project.status] = []
-    }
-    projects[project.status].push(project);
-    return projects;
-  }, {});
-
-  const sections = [];
-  if (projectsByStatus.contracted) {
-    sections.push(<Projects key="contracted" status="Contracted" projects={projectsByStatus.contracted} />);
-  }
-  if (projectsByStatus.deployed || projectsByStatus.development) {
-    const personalProjects = (projectsByStatus.deployed || []).concat(projectsByStatus.development || []);
-    sections.push(<Projects key="personal" status="Personal" projects={personalProjects} />);
-  }
-  if (projectsByStatus.retired) {
-    sections.push(<Projects key="retired" status="Retired" projects={projectsByStatus.retired} />);
-  }
+  const sortedProjects = new SortedProjects(data.allMarkdownRemark);
+  const personalProjects = (sortedProjects.deployed || []).concat(sortedProjects.development || []);
 
   return (
     <Container>
       <Helmet title={`Projects - ${data.site.siteMetadata.title}`}></Helmet>
       <h2>Projects</h2>
-      {sections.reduce((prev, current, index) => [prev, <hr key={index} />, current])}
+      <Projects key="contracted" status="Contracted" projects={sortedProjects.contracted} />
+      <hr />
+      <Projects key="personal" status="Personal" projects={personalProjects} />
+      <hr />
+      <Projects key="retired" status="Retired" projects={sortedProjects.retired} />
     </Container>
   );
 };

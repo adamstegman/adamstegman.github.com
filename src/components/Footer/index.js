@@ -4,7 +4,7 @@ import Atom from '../../assets/atom.svg';
 import Container from '../Container';
 import styles from './index.module.css';
 
-const Header = () => (
+const Footer = () => (
   <footer className={styles.footer}>
     <Atom className={styles.logo} />
     <Container>
@@ -29,4 +29,4 @@ const Header = () => (
   </footer>
 );
 
-export default Header;
+export default Footer;

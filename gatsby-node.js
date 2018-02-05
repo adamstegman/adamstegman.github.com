@@ -51,6 +51,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
+        layout: "project",
         path: node.fields.project.slug,
         component: projectTemplate,
         context: { slug: node.fields.project.slug },
