@@ -1,0 +1,19 @@
+.heading {
+  margin: 0.33rem 0;
+}
+.h4 {
+  composes: heading;
+}
+.h5 {
+  composes: heading;
+}
+
+.projects {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
+  color: rgba(0, 0, 0, 0.5);
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 
 import Container from '../components/Container';
 import profilePic from '../assets/adamstegman.jpg';
@@ -6,6 +7,7 @@ import styles from './index.module.css';
 
 const IndexPage = () => (
   <Container>
+    <Helmet title={"About Me - Adam Stegman"}></Helmet>
     <h2>About Me</h2>
     <section>
       <img src={profilePic} className={styles['profile-pic']} width="200" alt="Adam Stegman" />

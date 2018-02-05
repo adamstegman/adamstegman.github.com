@@ -30,6 +30,9 @@ const Header = () => (
             <a href="//blog.adamstegman.com" className={styles['nav-link']}>My Kind of Stupid (Blog)</a>
           </li>
           <li className={styles['nav-item']}>
+            <Link to="/projects/" className={styles['nav-link']}>Projects</Link>
+          </li>
+          <li className={styles['nav-item']}>
             <a href={resume} className={styles['nav-link']}>Résumé</a>
           </li>
           <li className={styles['nav-item']}>
