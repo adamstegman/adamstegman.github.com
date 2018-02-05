@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Adam Stegman',
+    description: '',
+    keywords: '',
   },
   plugins: [
     {
