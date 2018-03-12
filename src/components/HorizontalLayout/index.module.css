@@ -1,7 +1,9 @@
-.horizontal-layout {
-  display: flex;
-}
+@media (min-width: 40rem) {
+  .horizontal-layout {
+    display: flex;
+  }
 
-.justify-space-between {
-  justify-content: space-between;
+  .justify-space-between {
+    justify-content: space-between;
+  }
 }
