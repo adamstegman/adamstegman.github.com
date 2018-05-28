@@ -12,7 +12,7 @@ const IndexPage = ({ data }) => (
     <section>
       <img src={profilePic} className={styles['profile-pic']} width="200" alt="Adam Stegman" />
       <p>
-        I work for <a href="http://www.onemedical.com">One Medical</a> in San Francisco.
+        I work remotely for <a href="http://www.onemedical.com">One Medical</a> from Fort Worth, Texas.
         I got my BS in CS at <a href="http://www.k-state.edu/">Kansas State University</a> and graduated in 2009.
         I've worked in several languages, but I enjoy <a href="http://www.ruby-lang.org/">Ruby</a> the most currently, with interest in the simplicity of <a href="https://golang.org">Go</a>.
         I like to work on distributed systems using agile and XP practices.

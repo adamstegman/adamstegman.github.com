@@ -22,7 +22,7 @@ class Header extends React.Component {
                 {this.props.title}
               </Link>
             </h1>
-            <h2 className={styles.h2}>Senior Software Engineer</h2>
+            <h2 className={styles.h2}>Remote Senior Software Engineer</h2>
           </hgroup>
           <NavList>
             <Link to="/" className={styles['nav-link']}>About Me</Link>
