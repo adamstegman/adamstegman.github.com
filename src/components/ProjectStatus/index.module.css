@@ -1,5 +1,5 @@
 .status {
-  composes: splash-text from '../../layouts/index.module.css';
+  composes: splashText from '../Layout/index.module.css';
   display: inline-block;
   margin: 0 0 0.79rem;
   padding: .5rem;
@@ -11,7 +11,7 @@
 }
 
 .deployed {
-  composes: splash from '../../layouts/index.module.css';
+  composes: splash from '../Layout/index.module.css';
 }
 
 .development {

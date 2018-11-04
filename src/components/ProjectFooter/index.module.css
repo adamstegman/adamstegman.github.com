@@ -7,7 +7,7 @@
 }
 
 .h2, .h3 {
-  composes: splash-text from '../../layouts/index.module.css';
+  composes: splashText from '../Layout/index.module.css';
   margin-top: 0;
 }
 .h4, .h5 {
@@ -24,14 +24,14 @@
   margin: 0;
 }
 .nav-link {
-  composes: nav-link from '../Header/index.module.css';
+  composes: navLink from '../Header/index.module.css';
 }
 
 .link {
   composes: nav-link;
 }
 .footer {
-  composes: splash-text from '../../layouts/index.module.css';
+  composes: splashText from '../Layout/index.module.css';
 }
 
 .section {

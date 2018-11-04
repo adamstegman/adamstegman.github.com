@@ -1,7 +1,7 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 
-import Atom from '../../assets/atom.svg';
+import { ReactComponent as Atom } from '../../assets/atom.svg';
 import Container from '../Container';
 import NavList from '../NavList';
 import resume from '../../assets/resume.pdf';
@@ -17,7 +17,7 @@ class Header extends React.Component {
             <h1 className={styles.h1}>
               <Link
                 to="/"
-                className={styles['header-link']}
+                className={styles.headerLink}
               >
                 {this.props.title}
               </Link>
@@ -25,12 +25,12 @@ class Header extends React.Component {
             <h2 className={styles.h2}>Remote Senior Software Engineer</h2>
           </hgroup>
           <NavList>
-            <Link to="/" className={styles['nav-link']}>About Me</Link>
-            <a href="//blog.adamstegman.com" className={styles['nav-link']}>My Kind of Stupid (Blog)</a>
-            <Link to="/projects" className={styles['nav-link']}>Projects</Link>
-            <a href={resume} className={styles['nav-link']}>Résumé</a>
-            <a href="//twitter.com/adamstegman" className={styles['nav-link']}>Twitter</a>
-            <a href="//github.com/adamstegman" className={styles['nav-link']}>Github</a>
+            <Link to="/" className={styles.navLink}>About Me</Link>
+            <a href="//blog.adamstegman.com" className={styles.navLink}>My Kind of Stupid (Blog)</a>
+            <Link to="/projects" className={styles.navLink}>Projects</Link>
+            <a href={resume} className={styles.navLink}>Résumé</a>
+            <a href="//twitter.com/adamstegman" className={styles.navLink}>Twitter</a>
+            <a href="//github.com/adamstegman" className={styles.navLink}>Github</a>
           </NavList>
         </Container>
       </header>

@@ -71,15 +71,15 @@ const setProjectFields = ({ node, getNode, createNodeField }) => {
   createNodeField({ node, name: 'project', value: project });
 };
 
-exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
-  const { createNodeField } = boundActionCreators;
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions;
   if (node.internal.type === 'MarkdownRemark' && node.frontmatter.kind === 'project') {
     setProjectFields({ node, getNode, createNodeField });
   }
 };
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage, createRedirect } = boundActionCreators;
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage, createRedirect } = actions;
   createLegacyRedirects({ createRedirect });
   return createProjectPages({ graphql, createPage, createRedirect });
 };

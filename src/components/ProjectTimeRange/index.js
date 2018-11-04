@@ -11,7 +11,7 @@ class ProjectTimeRange extends React.Component {
     }
 
     return (
-      <p className={styles['close-text']}>
+      <p className={styles.closeText}>
         <time dateTime={project.createdAtTimestamp}>{project.createdAt}</time>&nbsp;&ndash;&nbsp;{endedAt}
       </p>
     );

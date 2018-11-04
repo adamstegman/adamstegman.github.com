@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Atom from '../../assets/atom.svg';
+import { ReactComponent as Atom } from '../../assets/atom.svg';
 import Container from '../Container';
 import HorizontalLayout from '../HorizontalLayout';
 import Projects from '../Projects';
@@ -19,25 +19,25 @@ class ProjectFooter extends React.Component {
           <div className={styles.section}>
             <h2 className={styles.h2}>Contact</h2>
             <nav>
-              <ul className={styles['nav-list']}>
-                <li className={styles['nav-item']}>
-                  <a href="//twitter.com/adamstegman" className={styles['nav-link']}>Follow me on Twitter</a>
+              <ul className={styles.navList}>
+                <li className={styles.navItem}>
+                  <a href="//twitter.com/adamstegman" className={styles.navLink}>Follow me on Twitter</a>
                 </li>
-                <li className={styles['nav-item']}>
-                  <a href="//github.com/adamstegman" className={styles['nav-link']}>Follow me on Github</a>
+                <li className={styles.navItem}>
+                  <a href="//github.com/adamstegman" className={styles.navLink}>Follow me on Github</a>
                 </li>
-                <li className={styles['nav-item']}>
-                  <a href="//profiles.google.com/adam.stegman" rel="me" className={styles['nav-link']}>Google Profile</a>
+                <li className={styles.navItem}>
+                  <a href="//profiles.google.com/adam.stegman" rel="me" className={styles.navLink}>Google Profile</a>
                 </li>
-                <li className={styles['nav-item']}>
-                  <a href="mailto:me@adamstegman.com" className={styles['nav-link']}>Email me</a>
+                <li className={styles.navItem}>
+                  <a href="mailto:me@adamstegman.com" className={styles.navLink}>Email me</a>
                 </li>
               </ul>
             </nav>
           </div>
           <div className={styles.section}>
             <h2 className={styles.h2}>Projects</h2>
-            <HorizontalLayout justifyContent="space-between">
+            <HorizontalLayout justifyContent="SpaceBetween">
               {sortedProjects.contracted && <Projects key="contracted" status="Contracted" projects={sortedProjects.contracted} styles={styles} />}
               {personalProjects && <Projects key="personal" status="Personal" projects={personalProjects} styles={styles} />}
               {sortedProjects.retired && <Projects key="retired" status="Retired" projects={sortedProjects.retired} styles={styles} />}
