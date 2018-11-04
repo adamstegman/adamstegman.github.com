@@ -1,5 +1,5 @@
 ---
-title: 1life
+title: 1Life
 subtitle: Electronic medical record and provider application for One Medical
 deployed_url: https://members.onemedical.com
 status: contracted
@@ -7,7 +7,8 @@ created_at: 2015-04-08
 kind: project
 ---
 ![One Medical Logo](./om.png)
-At [One Medical](http://www.onemedical.com/jobs/) I worked on 1life, the electronic medical record and provider application used by the clinical teams.
+
+At [One Medical](http://www.onemedical.com/jobs/) I worked on 1Life, the electronic medical record and provider application used by the clinical teams.
 
 ### Contributions
 
@@ -23,7 +24,7 @@ At [One Medical](http://www.onemedical.com/jobs/) I worked on 1life, the electro
 
 ### Description
 
-1life has been developed alongside the rest of the company since it started several years ago.
+1Life has been developed alongside the rest of the company since it started several years ago.
 It is written in Ruby on Rails and is deployed to [Elastic Beanstalk on Amazon Web Services](https://aws.amazon.com/elasticbeanstalk/).
 
 There are several components to the project.
