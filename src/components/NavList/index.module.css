@@ -24,6 +24,9 @@
 .item:last-child {
   margin-bottom: 0;
 }
+.item-button {
+  composes: buttonText from '../Layout/index.module.css';
+}
 
 @media (min-width: 40rem) {
   .button {
