@@ -13,13 +13,15 @@ export default ({ data }) => {
   return (
     <Layout>
       <Container>
-        <Helmet title={`Projects - ${data.site.siteMetadata.title}`}></Helmet>
-        <h2>Projects</h2>
-        <Projects key="contracted" status="Contracted" projects={sortedProjects.contracted} />
-        <hr />
-        <Projects key="personal" status="Personal" projects={personalProjects} />
-        <hr />
-        <Projects key="retired" status="Retired" projects={sortedProjects.retired} />
+        <Helmet title={`Projects - ${data.site.siteMetadata.title}`} />
+        <main>
+          <h2>Projects</h2>
+          <Projects key="contracted" status="Contracted" projects={sortedProjects.contracted} />
+          <hr />
+          <Projects key="personal" status="Personal" projects={personalProjects} />
+          <hr />
+          <Projects key="retired" status="Retired" projects={sortedProjects.retired} />
+        </main>
       </Container>
     </Layout>
   );

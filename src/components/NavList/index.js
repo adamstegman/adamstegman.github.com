@@ -20,7 +20,7 @@ class NavList extends React.Component {
     }
 
     return (
-      <nav>
+      <nav aria-label="primary">
         <button aria-expanded={this.state.expanded}
                 aria-controls="nav-list"
                 className={styles.button}

@@ -9,7 +9,7 @@ const Footer = () => (
     <Atom className={styles.logo} />
     <Container>
       <h2 className={styles.h2}>Contact</h2>
-      <nav>
+      <nav aria-label="secondary">
         <ul className={styles.navList}>
           <li className={styles.navItem}>
             <a href="//twitter.com/adamstegman" className={styles.navLink}>Follow me on Twitter</a>

@@ -18,8 +18,8 @@ export default ({ data }) => {
   return (
     <Layout>
       <Container>
-        <Helmet title={`${project.title}: ${project.subtitle} - ${data.site.siteMetadata.title}`}></Helmet>
-        <article>
+        <Helmet title={`${project.title}: ${project.subtitle} - ${data.site.siteMetadata.title}`} />
+        <main>
           <header className={styles.header}>
             <hgroup className={styles.headerText}>
               <h2>{title}</h2>
@@ -30,7 +30,7 @@ export default ({ data }) => {
             {project.sourceUrl && <p className={styles.headerText}>Open source. <a href={project.sourceUrl}>Code available here</a>.</p>}
           </header>
           <section dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></section>
-        </article>
+        </main>
       </Container>
     </Layout>
   );
