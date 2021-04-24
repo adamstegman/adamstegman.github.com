@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Adam Stegman',
-    description: 'Software Engineer (B.S. Computer Science) with experience in Ruby (and Rails), HTML/CSS, Javascript, Go, several JVM languages, and with devops. I like to work on distributed systems using agile and XP practices.',
+    description: 'Remote Staff Software Engineer (B.S. Computer Science) with experience in Ruby (and Rails), HTML/CSS, Typescript/Javascript, Go, several JVM languages, and with devops. I like to work on distributed systems using agile and XP practices.',
   },
   plugins: [
     {
