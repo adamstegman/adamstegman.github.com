@@ -18,6 +18,7 @@ module.exports = {
       options: {
         logo: "./src/assets/atom.png",
         injectHTML: true,
+        theme_color: '#0288D1',
         icons: {
           android: true,
           appleIcon: true,
