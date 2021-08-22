@@ -5,9 +5,9 @@ import Container from '../components/Container';
 import Layout from '../components/ProjectLayout';
 import ProjectStatus from '../components/ProjectStatus';
 import ProjectTimeRange from '../components/ProjectTimeRange';
-import styles from './project.module.css';
+import { header, headerText, subtitle } from './project.module.css';
 
-export default ({ data }) => {
+const project = ({ data }) => {
   const project = data.markdownRemark.fields.project;
   let title;
   if (project.deployedUrl) {
@@ -20,14 +20,14 @@ export default ({ data }) => {
       <Container>
         <Helmet title={`${project.title}: ${project.subtitle} - ${data.site.siteMetadata.title}`} />
         <main>
-          <header className={styles.header}>
-            <hgroup className={styles.headerText}>
+          <header className={header}>
+            <hgroup className={headerText}>
               <h2>{title}</h2>
-              {project.subtitle && <h3 className={styles.subtitle}>{project.subtitle}</h3>}
+              {project.subtitle && <h3 className={subtitle}>{project.subtitle}</h3>}
             </hgroup>
             <ProjectStatus status={project.status}></ProjectStatus>
             <ProjectTimeRange project={project}></ProjectTimeRange>
-            {project.sourceUrl && <p className={styles.headerText}>Open source. <a href={project.sourceUrl}>Code available here</a>.</p>}
+            {project.sourceUrl && <p className={headerText}>Open source. <a href={project.sourceUrl}>Code available here</a>.</p>}
           </header>
           <section dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></section>
         </main>
@@ -35,6 +35,7 @@ export default ({ data }) => {
     </Layout>
   );
 }
+export default project;
 
 export const query = graphql`
   query($slug: String!) {

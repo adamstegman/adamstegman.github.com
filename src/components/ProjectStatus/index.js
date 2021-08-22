@@ -1,10 +1,12 @@
 import React from 'react';
 
-import styles from './index.module.css';
+import { contracted, deployed, development, retired, status } from './index.module.css';
 
+const STATUSES = { contracted, deployed, development, retired };
 class ProjectStatus extends React.Component {
+
   render() {
-    const classNames = [styles.status, styles[this.props.status]].join(" ");
+    const classNames = [status, STATUSES[this.props.status]].join(" ");
     return (
       <h4 className={classNames}>{this.props.status}</h4>
     );

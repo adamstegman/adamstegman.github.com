@@ -1,11 +1,13 @@
 import React from 'react';
 
-import styles from './index.module.css';
+import { horizontalLayout, justifySpaceBetween } from './index.module.css';
+
+const styles = { justifySpaceBetween };
 
 // Only horizontal on large screens; do not use for small content.
 class HorizontalLayout extends React.Component {
   render() {
-    const classNames = [styles.horizontalLayout];
+    const classNames = [horizontalLayout];
     if (this.props.justifyContent) {
       classNames.push(styles[`justify${this.props.justifyContent}`]);
     }

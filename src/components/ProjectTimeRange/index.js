@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './index.module.css';
+import { closeText } from './index.module.css';
 
 class ProjectTimeRange extends React.Component {
   render() {
@@ -11,7 +11,7 @@ class ProjectTimeRange extends React.Component {
     }
 
     return (
-      <p className={styles.closeText}>
+      <p className={closeText}>
         <time dateTime={project.createdAtTimestamp}>{project.createdAt}</time>&nbsp;&ndash;&nbsp;{endedAt}
       </p>
     );

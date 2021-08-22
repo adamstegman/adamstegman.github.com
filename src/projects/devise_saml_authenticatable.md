@@ -10,7 +10,7 @@ kind: project
 
 With one other engineer, I finished the basic functionality of [`devise_saml_authenticatable`](https://github.com/apokalipto/devise_saml_authenticatable), then offered continued support and maintenance for the project.
 
-Our [internal application](1life.html) at [One Medical](http://www.onemedical.com/jobs/) needed single sign-on (SSO) to support better security practices for our providers and admins.
+Our [internal application](/projects/1life.html) at [One Medical](http://www.onemedical.com/jobs/) needed single sign-on (SSO) to support better security practices for our providers and admins.
 We already used [devise](https://github.com/plataformatec/devise) for authentication, so we looked for a SAML plugin.
 All we found was an unfinished plugin, but we saw that it wouldn't take too much work to finish the functionality we needed.
 

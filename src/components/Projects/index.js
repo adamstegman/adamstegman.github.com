@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import ProjectTimeRange from '../ProjectTimeRange';
-import styles from './index.module.css';
+import * as styles from './index.module.css';
 
 class Projects extends React.Component {
   render() {

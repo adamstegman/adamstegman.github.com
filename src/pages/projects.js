@@ -6,7 +6,7 @@ import Layout from '../components/ProjectLayout';
 import Projects from '../components/Projects';
 import SortedProjects from '../utils/SortedProjects';
 
-export default ({ data }) => {
+const projects = ({ data }) => {
   const sortedProjects = new SortedProjects(data.allMarkdownRemark);
   const personalProjects = (sortedProjects.deployed || []).concat(sortedProjects.development || []);
 
@@ -26,6 +26,7 @@ export default ({ data }) => {
     </Layout>
   );
 };
+export default projects;
 
 export const query = graphql`
   {

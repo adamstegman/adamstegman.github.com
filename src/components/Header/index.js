@@ -5,32 +5,32 @@ import { ReactComponent as Atom } from '../../assets/atom.svg';
 import Container from '../Container';
 import NavList from '../NavList';
 import resume from '../../assets/resume.pdf';
-import styles from './index.module.css';
+import { h1, h2, header, headerLink, logo, navLink } from './index.module.css';
 
 class Header extends React.Component {
   render() {
     return (
-      <header className={styles.header}>
-        <Atom className={styles.logo} />
+      <header className={header}>
+        <Atom className={logo} />
         <Container>
           <hgroup>
-            <h1 className={styles.h1}>
+            <h1 className={h1}>
               <Link
                 to="/"
-                className={styles.headerLink}
+                className={headerLink}
               >
                 {this.props.title}
               </Link>
             </h1>
-            <h2 className={styles.h2}>Remote Staff Software Engineer</h2>
+            <h2 className={h2}>Remote Staff Software Engineer</h2>
           </hgroup>
           <NavList>
-            <Link to="/" className={styles.navLink}>About Me</Link>
-            <a href="//blog.adamstegman.com" className={styles.navLink}>My Kind of Stupid (Blog)</a>
-            <Link to="/projects" className={styles.navLink}>Projects</Link>
-            <a href={resume} className={styles.navLink}>Résumé</a>
-            <a href="//twitter.com/adamstegman" className={styles.navLink}>Twitter</a>
-            <a href="//github.com/adamstegman" className={styles.navLink}>Github</a>
+            <Link to="/" className={navLink}>About Me</Link>
+            <a href="//blog.adamstegman.com" className={navLink}>My Kind of Stupid (Blog)</a>
+            <Link to="/projects" className={navLink}>Projects</Link>
+            <a href={resume} className={navLink}>Résumé</a>
+            <a href="//twitter.com/adamstegman" className={navLink}>Twitter</a>
+            <a href="//github.com/adamstegman" className={navLink}>Github</a>
           </NavList>
         </Container>
       </header>

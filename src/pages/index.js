@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import Container from '../components/Container';
 import Layout from '../components/Layout';
 import profilePic from '../assets/adamstegman.jpg';
-import styles from './index.module.css';
+import { profilePic as profilePicStyles, smartQuotes } from './index.module.css';
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => (
       <main>
         <h2>About Me</h2>
         <section>
-          <img src={profilePic} className={styles.profilePic} width="200" alt="Adam Stegman" />
+          <img src={profilePic} className={profilePicStyles} width="200" alt="Adam Stegman" />
           <p>
             I work remotely as a Staff Software Engineer for <a href="https://www.onemedical.com">One Medical</a> from Fort Worth, Texas.
             I got my BS in Computer Science at <a href="https://www.k-state.edu/">Kansas State University</a> and graduated in 2009.
@@ -40,7 +40,7 @@ const IndexPage = ({ data }) => (
             The opposite rubs me the wrong way&mdash;unclear ownership, hard-to-find answers, or a lack of empathy.
             Those are the problems I want to dive into and fix.
           </p>
-          <p className={styles.smartQuotes}>
+          <p className={smartQuotes}>
             I highly value companies that buy into agile at every level of the business. <q>Agile at scale requires trust at scale,</q> and that is very hard to achieve.
           </p>
 

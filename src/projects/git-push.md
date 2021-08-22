@@ -16,7 +16,7 @@ Previously my blog was on [Tumblr](http://adamstegman.tumblr.com/), so I could u
 Now, since I host my [website](/) and [blog](//blog.adamstegman.com/) myself now and keep all the code on [Github](https://github.com/adamstegman/adamstegman.github.com), I need to keep on top of updates.
 
 To do that, I want to be able to write a post from anywhere.
-I found the right platform in [Nanoc::Heroku](https://github.com/mrrooijen/nanoc-heroku) which you can read more about on the [AdamStegman.com project page](./adamstegman.html).
+I found the right platform in [Nanoc::Heroku](https://github.com/mrrooijen/nanoc-heroku) which you can read more about on the [AdamStegman.com project page](/projects/adamstegman.html).
 Nanoc::Heroku supports [Markdown](https://daringfireball.net/projects/markdown/) pages, which I could easily write from my iPhone or iPad.
 
 Unfortunately, there are two key steps missing once I've written something on a mobile device.

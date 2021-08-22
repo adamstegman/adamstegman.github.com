@@ -14,22 +14,14 @@ module.exports = {
 
     'gatsby-plugin-react-helmet',
     {
-      resolve: 'gatsby-plugin-favicon',
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        logo: "./src/assets/atom.png",
-        injectHTML: true,
-        theme_color: '#0288D1',
-        icons: {
-          android: true,
-          appleIcon: true,
-          appleStartup: false,
-          coast: true,
-          favicons: true,
-          firefox: true,
-          twitter: true,
-          yandex: true,
-          windows: true,
-        },
+        name: `Adam Stegman`,
+        start_url: `/`,
+        background_color: `#fff`,
+        theme_color: `#0288D1`,
+        display: `browser`,
+        icon: `src/assets/atom.png`,
       },
     },
     {

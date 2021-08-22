@@ -8,14 +8,14 @@ kind: project
 ---
 ![One Medical Logo](./om.png)
 
-At [One Medical](https://www.onemedical.com/jobs/) I primarily worked on 1Life, the electronic medical record and provider application used by the clinical teams, as well as [My One](my-one.html).
+At [One Medical](https://www.onemedical.com/jobs/) I primarily worked on 1Life, the electronic medical record and provider application used by the clinical teams, as well as [My One](/projects/my-one.html).
 
 ### Contributions
 
 - Introduced improved continuous deployment and operations systems
 - Migrated infrastructure to self-hosted, private networks in AWS
 - Automated and simplified provider workflows and maintained EMR application
-- Created and maintained several open-source projects, including [`devise_saml_authenticatable`](devise_saml_authenticatable.html)
+- Created and maintained several open-source projects, including [`devise_saml_authenticatable`](/projects/devise_saml_authenticatable.html)
 - Integrated with clinical data providers and systems using HL7 and C-CDA
 
 ### Description
@@ -27,12 +27,12 @@ There were several components to the project, but now most have been extracted t
 
 - API
 - Admin application (partially extracted)
-- Patient application (mostly extracted, see [My One](my-one.html))
+- Patient application (mostly extracted, see [My One](/projects/my-one.html))
 - Provider application (extracted)
 
 Separate projects contain clients that the API supports:
 
 - Charting application (Angular)
-- Patient application (Angular) (see [My One](my-one.html))
+- Patient application (Angular) (see [My One](/projects/my-one.html))
 - Admin applications (React)
 - Mobile clients
