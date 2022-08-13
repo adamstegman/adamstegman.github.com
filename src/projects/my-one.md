@@ -8,14 +8,15 @@ kind: project
 ---
 ![One Medical Logo](./om.png)
 
-At [One Medical](https://www.onemedical.com/jobs/) I primarily worked on My One and [1Life](/projects/1life.html).
+At [One Medical](https://www.onemedical.com/careers/) I primarily worked on My One and [1Life](/projects/1life.html).
 My One is the web application that patients access to send secure messages, book appointments, and manage their account.
 
 ### Contributions
 
 - Built and later updated enterprise patient registration
 - Created a service to ingest enterprise client eligibility files
-- Quickly built tools for enterprise clients to support a return to work during COVID-19.
+- Quickly built tools for enterprise clients to support a return to work during COVID-19
+- Planned and executed a rewrite of membership lifecycle and billing systems
 
 ### Description
 

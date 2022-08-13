@@ -8,7 +8,8 @@ kind: project
 ---
 ![One Medical Logo](./om.png)
 
-At [One Medical](https://www.onemedical.com/jobs/) I primarily worked on 1Life, the electronic medical record and provider application used by the clinical teams, as well as [My One](/projects/my-one.html).
+At [One Medical](https://www.onemedical.com/careers/) I primarily worked on 1Life and [My One](/projects/my-one.html).
+1Life is the electronic medical record and provider application used by the clinical teams.
 
 ### Contributions
 
