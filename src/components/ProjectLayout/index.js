@@ -9,7 +9,7 @@ const TemplateWrapper = ({ children }) => (
   <StaticQuery
     query={graphql`
       {
-        allMarkdownRemark(filter: { frontmatter: { kind: { eq: "project" } } }, sort: { fields: [frontmatter___ended_at], order: DESC }) {
+        allMarkdownRemark(filter: { frontmatter: { kind: { eq: "project" } } }, sort: { frontmatter: { ended_at: DESC } }) {
           edges {
             node {
               fields {
