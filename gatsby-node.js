@@ -10,7 +10,6 @@ const { createFilePath } = require(`gatsby-source-filesystem`);
 const createLegacyRedirects = ({ createRedirect }) => {
   createRedirect({
     fromPath: '/projects.html',
-    isPermanent: true,
     redirectInBrowser: true,
     toPath: '/projects',
   });
@@ -81,5 +80,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
   createLegacyRedirects({ createRedirect });
+  createRedirect({
+    fromPath: '/now',
+    toPath: 'http://status.adamstegman.com',
+    isPermanent: true,
+    redirectInBrowser: true,
+  });
   return createProjectPages({ graphql, createPage, createRedirect });
 };
