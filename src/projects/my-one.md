@@ -13,10 +13,10 @@ My One is the web application that patients access to send secure messages, book
 
 ### Contributions
 
-- Built and later updated enterprise patient registration
-- Created a service to ingest enterprise client eligibility files
-- Quickly built tools for enterprise clients to support a return to work during COVID-19
 - Planned and executed a rewrite of membership lifecycle and billing systems
+- Quickly built tools for enterprise clients to support a return to work during COVID-19
+- Created a service to ingest enterprise client eligibility files
+- Built and later updated enterprise patient registration
 
 ### Description
 

@@ -25,7 +25,7 @@ const IndexPage = ({ data }) => (
           <p>
             Most of my web work has been on the backend, often in Ruby on Rails, and I enjoy the core web technologies of HTML, CSS, and JavaScript.
             I also gravitate to the other side of the stack, setting up repeatable, consistent server environments that are fully automated and continuously deployed.
-            Most recently, that&#8217;s been deploying small services to <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> and <a href="https://aws.amazon.com/fargate/">AWS Fargate</a> using <a href="https://www.terraform.io">Terraform</a>.
+            Most recently, that&#8217;s been deploying small services to <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> and <a href="https://aws.amazon.com/fargate/">AWS Fargate</a> using <a href="https://www.terraform.io">Terraform</a> and <a href="https://aws.amazon.com/cdk/">CDK</a>.
             I&#8217;ve also appreciated the philosophy of other devops tools like <a href="https://bosh.io">BOSH</a>, <a href="https://www.packer.io">Packer</a>, and <a href="https://www.chef.io">Chef</a>.
             When working on ops teams, I&#8217;ve automated and deployed services like <a href="https://www.cloudfoundry.org">Cloud Foundry</a> and <a href="https://www.elastic.co/elasticsearch/">Elasticsearch</a> to <a href="https://aws.amazon.com">AWS</a>.
           </p>
@@ -48,8 +48,8 @@ const IndexPage = ({ data }) => (
 
           <p>
             I started working at One Medical in 2015 on the electronic medical record and provider application, <a href="/projects/1life.html">1life</a>.
-            Lately I&#8217;ve been working on supporting our enterprise clients, especially with COVID-19 response.
-            Previous to that I worked on our clinical team workflows, and helped migrate much of our infrastructure from Heroku and hosted services to Amazon Web Services.
+            Lately I&#8217;ve been working on supporting our developers, streamlining and automating their workflows.
+            Before that I supported our enterprise clients, especially with COVID-19 response, clinical team workflows, and helped migrate much of our infrastructure from Heroku and hosted services to Amazon Web Services.
             The first projects I worked on at One Medical were around clinical compliance with new standards and member registration.
           </p>
           <p>

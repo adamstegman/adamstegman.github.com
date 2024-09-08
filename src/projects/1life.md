@@ -13,8 +13,10 @@ At [One Medical](https://www.onemedical.com/careers/) I primarily worked on 1Lif
 
 ### Contributions
 
-- Introduced improved continuous deployment and operations systems
+- Researched and implemented a “paved path” for new services
 - Migrated infrastructure to self-hosted, private networks in AWS
+- Introduced improved continuous deployment and operations systems
+- Identified and automated tasks affecting developer productivity
 - Automated and simplified provider workflows and maintained EMR application
 - Created and maintained several open-source projects, including [`devise_saml_authenticatable`](/projects/devise_saml_authenticatable.html)
 - Integrated with clinical data providers and systems using HL7 and C-CDA
