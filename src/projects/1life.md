@@ -13,6 +13,7 @@ At [One Medical](https://www.onemedical.com/careers/) I primarily worked on 1Lif
 
 ### Contributions
 
+- Redesigned the release process to meet quality goals
 - Researched and implemented a “paved path” for new services
 - Migrated infrastructure to self-hosted, private networks in AWS
 - Introduced improved continuous deployment and operations systems
