@@ -15,8 +15,8 @@ const IndexPage = ({ data }) => (
         <section>
           <img src={profilePic} className={profilePicStyles} width="200" alt="Adam Stegman" />
           <p>
-            I am a driven engineering professional with a passion for leading teams and fostering collaboration through agile practices.
-            I&#8217;m currently working toward a role in engineering management, leveraging my hands-on experience in full-stack web development and infrastructure automation.
+            I am a driven engineer with a passion for leading teams and fostering collaboration through agile practices.
+            I&#8217;m a Staff engineer who usually takes the role of <a href="https://staffeng.com/guides/staff-archetypes/#tech-lead">Tech Lead</a>, leveraging my hands-on experience in full-stack web development and infrastructure automation.
           </p>
           <p>
             I work remotely as a Senior Software Engineer (SDE3) for <a href="https://www.amazon.com">Amazon</a> from Fort Worth, Texas.
