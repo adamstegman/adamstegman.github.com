@@ -1,7 +1,7 @@
 ---
 title: 1Life
 subtitle: Electronic medical record and provider application for One Medical
-deployed_url: https://members.onemedical.com
+deployed_url: https://onemedical.com
 status: contracted
 created_at: 2015-04-08
 kind: project
