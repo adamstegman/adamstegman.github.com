@@ -19,7 +19,7 @@ const IndexPage = ({ data }) => (
             I&#8217;m a Staff engineer who usually takes the role of <a href="https://staffeng.com/guides/staff-archetypes/#tech-lead">Tech Lead</a>, leveraging my hands-on experience in full-stack web development and infrastructure automation.
           </p>
           <p>
-            I work remotely as a Senior Software Engineer (SDE3) for <a href="https://www.amazon.com">Amazon</a> from Fort Worth, Texas.
+            I work remotely as a Senior Staff Software Engineer from Fort Worth, Texas.
             I got my BS in Computer Science at <a href="https://www.k-state.edu/">Kansas State University</a> and graduated in 2009.
           </p>
         </section>
@@ -50,11 +50,14 @@ const IndexPage = ({ data }) => (
           <h3>A little history</h3>
 
           <p>
+            In 2026 I joined a new startup that has not yet been announced.
+          </p>
+          <p>
             I started working at One Medical in 2015 on the electronic medical record and provider application, <a href="/projects/1life.html">1life</a>.
             In 2023 we were acquired by Amazon.
-            Lately I&#8217;ve been working on supporting our developers, helping them deliver high-quality software faster.
+            I worked on supporting our builders, helping them deliver high-quality software faster by improving their tooling and processes.
             Before that I supported our enterprise clients, especially with COVID-19 response, clinical team workflows, and helped migrate much of our infrastructure from Heroku and hosted services to Amazon Web Services.
-            The first projects I worked on at One Medical were around clinical compliance with new standards and member registration.
+            The first projects I worked on at One Medical were around clinical workflows, compliance with new standards, and member registration.
           </p>
           <p>
             In 2013 I accepted an offer from Pivotal Labs and moved to the San Francisco Bay Area.
